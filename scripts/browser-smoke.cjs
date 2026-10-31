@@ -4,7 +4,7 @@ const assert=require('node:assert/strict');const fs=require('node:fs');
 (async()=>{
  const browser=await chromium.launch({headless:true,args:['--use-fake-device-for-media-stream','--use-fake-ui-for-media-stream']});
  const base=process.env.TEST_URL||'http://127.0.0.1:5178/aurora-head-tracking/';
- const results=[];
+ const results=[]; const record=results.push.bind(results); results.push=(...items)=>{console.log(...items);return record(...items)};
  try{
  const context=await browser.newContext({viewport:{width:390,height:844},permissions:['camera']});
  const page=await context.newPage();const errors=[];page.on('pageerror',e=>errors.push(e.message));

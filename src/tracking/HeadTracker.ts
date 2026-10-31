@@ -69,6 +69,7 @@ export class HeadTracker {
   this.stream?.getTracks().forEach(t=>t.stop());this.stream=null;
   this.video.pause();this.video.srcObject=null;
   this.detector?.close();this.detector=null;this.center=null;this.lastVideoTime=-1;
+  this.lost=false;this.lastSeen=0;this.interval=100;
  }
  dispose(){this.stop();this.video.remove();}
 }
