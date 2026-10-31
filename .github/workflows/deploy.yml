@@ -1,7 +1,7 @@
 name: Verify and deploy Aurora
 on:
   push:
-    branches: [main, codex/aurora]
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read

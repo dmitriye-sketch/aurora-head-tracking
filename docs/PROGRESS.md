@@ -23,3 +23,11 @@ Verification pending: unit/build, browser viewport/image/Auto/Touch/permission/l
 - Visual gate: brief/reference composition PASS; real image at product scale PASS; typography/control finish PASS; image technical truth PASS. Agent-inspected implementation candidate, not owner-approved or physically iPhone-verified. Photo retains captured natural water/grass/forest/sky surfaces; no generated materials or PBR assets introduced.
 - Security reviewer (Astra/high) found low correctness defect: stop retained face-loss state, causing second no-face start status to stall. Prevention: reset session state on stop; test restart with no face. Corrected in995f42f; independent behavioral repro passes. Gitleaks8.30.1 tree/history and Semgrep1.179.0 baseline +three focused web rules returned0 findings. Security publication gate PASS for candidate; opaque third-party runtime limitations retained in SECURITY.md.
 - Browser fake-camera full-model test initially reproduced repeat-start timeout; superseded by rerun against fix, still pending at checkpoint. No real face/iPhone/head accuracy/FPS claim.
+
+## Functional rerun after correction
+
+`PLAYWRIGHT_BROWSERS_PATH=/Volumes/vader/Codex/GitHubKit/tools/browsers node scripts/browser-smoke.cjs` PASS (12 scenario outcomes in work/browser-results.json): actual locked MediaPipe JS/WASM/model initialized on Chromium fake camera; two no-face sessions; mode/background tracks ended; denied camera returned to Auto; reduced motion respected and explicit Auto restarts; image fallback without WebGL; no page errors; mobile axe zero violations; layout/input/control checks. This supersedes initial second-session timeout. Camera test is fake-device Chromium, not physical iPhone or real-face tracking accuracy.
+
+## Initial deployment correction
+
+The first main run was cancelled by the subsequent codex push; codex deploy then failed before execution because github-pages permits main only. Confirmed via check-run annotations124528252624; no build failure or billing issue. Retain that branch protection. Narrow automatic workflow trigger to main and publish the initial reviewed site snapshot there; codex remains working branch. No force push or protection bypass.
