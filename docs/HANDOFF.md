@@ -10,4 +10,4 @@ No physical iPhone camera, real-face accuracy, 60FPS, thermal or iOS Safari hard
 
 MediaPipe first-time head mode needs a ~14MB selected WASM plus3.6MBmodel download. Static photo/Auto do not need model download. JS/texture loads are same-origin; no external frame transfer. Three render chunk531kBraw/132kBgzip is lazy; no false all-app small-bundle claim.
 
-Deployment/live verification and final cleanup recorded in PROGRESS.md after Actions completes. No backend, credentials, paid service or ongoing dev server is needed by the hosted app.
+Deployment SUCCESS on6b77cab, Actions41198272282. Live browser Auto/image/canvas PASS; all16assets HTTP200 and live photo hash matches original. Final evidence and cleanup recorded in PROGRESS.md. No backend, credentials, paid service or ongoing dev server is needed by the hosted app.

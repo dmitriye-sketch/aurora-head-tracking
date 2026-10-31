@@ -31,3 +31,13 @@ Verification pending: unit/build, browser viewport/image/Auto/Touch/permission/l
 ## Initial deployment correction
 
 The first main run was cancelled by the subsequent codex push; codex deploy then failed before execution because github-pages permits main only. Confirmed via check-run annotations124528252624; no build failure or billing issue. Retain that branch protection. Narrow automatic workflow trigger to main and publish the initial reviewed site snapshot there; codex remains working branch. No force push or protection bypass.
+
+## Published acceptance 2026-10-31
+
+Published application/config commit6b77cabfe9ea77cd3e54c6c88ed4cad44999ce29. Actions run41198272282 SUCCESS: https://github.com/dmitriye-sketch/aurora-head-tracking/actions/runs/41198272282 . Both initial public main and working branch synced to that snapshot before this handoff-only update. Protected security reviewer accepted final workflow delta; application bytes unchanged from995f42f.
+
+Live https://dmitriye-sketch.github.io/aurora-head-tracking/ checked in actual Chromium browser at390×844: secure context=true, source image decoded854×1280, canvas1, automatic motion changes without input, no overflow, console0errors. Published screenshot work/published-mobile.png opened/inspected against original. All16dist files returned HTTP200, including model, allWASM variants and lazyJS/CSS; WASM MIME application/wasm. Downloaded live photo hash matches original byte-for-byte. Raw work/live-check.json. No Safari/iPhone hardware claim.
+
+Final decision: published browser-tested prototype; physical iPhone head tracking/FPS validation remains outstanding. Purposefully limited continuous depth warp; no invented depth estimation/hidden reconstruction/3DGS. User's automatic-effect correction is implemented as default Auto, manual Touch optional only. No owner selection/approval of invented UI is claimed.
+
+Resource lifecycle: browser-smoke contexts closed via finally; task-owned interactive browser closed; task dev server stopped after checks. Sources, accepted screenshots, compact logs/security/browser/live evidence retained on Vader; temporary copied screenshot files removed from local mirror after byte verification. No shared services or owner Chrome touched. Models used: renderer gpt-6.1-terra/medium; protected independent security Astra/high; lead unchanged. Qwen no_suitable_task for protected final acceptance/deterministic checks.
